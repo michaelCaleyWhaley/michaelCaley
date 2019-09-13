@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  width: 100%;
+  padding-bottom: 30%;
+  max-height: 500px;
+
+  @media all and (max-width: 700px) {
+    padding-bottom: 0;
+    height: 100vh;
+    max-height: 1000px;
+  }
+
+  &__text-area {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: rgba(255, 255, 255, .8);
+    pointer-events: none;
+    letter-spacing: 2px;
+  }
+
+  &__title {
+    margin: 0 0 3px;
+
+    &--fade-1 {
+      animation: titleFade 0.5s ease-out forwards;
+    }
+
+    &--fade-2,
+    &--fade-3,
+    &--fade-4 {
+      transform: translateY(100%);
+      display: inline-block;
+      animation: titleFade 0.5s ease-out forwards 0.5s;
+      opacity: 0;
+    }
+
+    &--fade-3 {
+      animation-delay: 1s
+    }
+
+    &--fade-4 {
+      animation-delay: 1.5s
+    }
+  }
+
+  .torch {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://i.ytimg.com/vi/q2WnQEQIZ5M/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &__text {
+      font-size: 20px;
+      color: #000;
+      text-align: right;
+    }
+
+    &__light {
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, #000 20%);
+      transition: transform 0.3s ease-out;
+    }
+  }
+}
+
+@keyframes titleFade {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

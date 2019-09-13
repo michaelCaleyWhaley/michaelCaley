@@ -1,0 +1,30 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: none;
+  // background-color: rgba(10,10,10, .95);
+  z-index: 1;
+
+  &__links {
+    display: flex;
+    padding: 4px 16px;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  &__link {
+    padding: 6px 8px;
+
+    a {
+      color: rgba(255,255,255, .7);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+  }
+}
