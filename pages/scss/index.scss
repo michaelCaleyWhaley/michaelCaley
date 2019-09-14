@@ -126,3 +126,34 @@
     box-sizing: border-box;
   }
 }
+
+.projects {
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.7;
+    padding: 0 15px;
+    max-width: 620px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+
+.project {
+
+  &--padded {
+    padding: 0 15px;
+  }
+}

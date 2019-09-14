@@ -109,7 +109,33 @@ class Home extends Component {
 
         <div className="container">
           <div className="container__title container__title--centered">
-            <h1>Latest works</h1>
+            <h1 className="projects__title">Latest works</h1>
+          </div>
+          <p className="projects__text">
+            Curabitur eu adipiscing lacus, a iaculis diam. Nullam placerat
+            blandit auctor. Nulla accumsan ipsum et nibh rhoncus, eget tempus
+            sapien ultricies. Donec mollis lorem vehicula.
+          </p>
+
+          <div className="projects__row">
+            <div className="project">
+              <img
+                src="http://rhythm.bestlooker.pro/images/portfolio/projects-13.jpg"
+                alt="project"
+              />
+            </div>
+            <div className="project project--padded">
+              <img
+                src="http://rhythm.bestlooker.pro/images/portfolio/projects-14.jpg"
+                alt="project"
+              />
+            </div>
+            <div className="project">
+              <img
+                src="http://rhythm.bestlooker.pro/images/portfolio/projects-15.jpg"
+                alt="project"
+              />
+            </div>
           </div>
         </div>
       </Layout>
