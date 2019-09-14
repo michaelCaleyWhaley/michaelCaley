@@ -1,0 +1,36 @@
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 100px auto;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+
+    &--centered {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.5em;
+      line-height: 1.4;
+    }
+  }
+}
+
+.hr {
+  &--default {
+    margin: 0;
+    border-top: 1px solid #eee;
+    background-color: rgba(255, 255, 255, .08);
+  }
+}
