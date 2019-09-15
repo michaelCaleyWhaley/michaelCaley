@@ -54,7 +54,9 @@ class Nav extends Component {
 
     return (
       <nav className={`nav ${navClass}`}>
-        <div className="nav__logo"></div>
+        <h1 className="nav__logo">
+          <span className="nav__logo--underline">MICHAEL CALEY</span>
+        </h1>
         <ul className="nav__links">
           {links.map(({ key, href, label }) => (
             <li className="nav__link" key={key}>

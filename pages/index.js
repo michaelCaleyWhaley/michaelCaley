@@ -68,14 +68,15 @@ class Home extends Component {
 
           <div className="container">
             <div className="hero__text-area">
-              <h1 className="hero__title hero__title--fade-1">Michael Caley</h1>
+              {/* <h1 className="hero__title hero__title--fade-1">Michael Caley</h1> */}
               <p className="hero__title hero__title--sub">
                 <span className="hero__title--fade-2">RESPONSIBLE</span>{" "}
-                <span className="hero__title--fade-3">/ FRIENDLY</span>
+                <span className="hero__title--fade-3">/ FRIENDLY</span>{" "}
+                <span className="hero__title--fade-4">/ DEVELOPMENT</span>
               </p>
-              <p className="hero__title hero__title--sub">
+              {/* <p className="hero__title hero__title--sub">
                 <span className="hero__title--fade-4">DEVELOPMENT</span>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
