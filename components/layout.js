@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Nav from "./nav";
+import Footer from "./footer";
 
 import "./scss/layout.scss";
 
@@ -18,6 +19,6 @@ export default ({ children, title = "Michael Caley Web Developer" }) => (
     <header></header>
     <Nav></Nav>
     {children}
-    <footer></footer>
+    <Footer />
   </div>
 );

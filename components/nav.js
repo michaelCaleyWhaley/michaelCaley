@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEthernet } from "@fortawesome/free-solid-svg-icons";
 
 import "./scss/nav.scss";
 
@@ -55,7 +57,8 @@ class Nav extends Component {
     return (
       <nav className={`nav ${navClass}`}>
         <h1 className="nav__logo">
-          <span className="nav__logo--underline">MICHAEL CALEY</span>
+          <FontAwesomeIcon className="nav__logo--icon" icon={faEthernet} />
+          {/* <span className="nav__logo--underline">MICHAEL CALEY</span> */}
         </h1>
         <ul className="nav__links">
           {links.map(({ key, href, label }) => (

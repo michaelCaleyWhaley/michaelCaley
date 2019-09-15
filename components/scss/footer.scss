@@ -1,0 +1,38 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__icon {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    align-self: center;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-height: 100%;
+    }
+
+    &--padded {
+      margin: 0 25px;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      height: 140%;
+      width: 140%;
+      border: 1px solid black;
+    }
+
+  }
+
+}
