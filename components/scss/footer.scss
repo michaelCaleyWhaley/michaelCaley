@@ -1,4 +1,11 @@
-.social {
+.footer {
+  &__title {
+    width: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+.footer-row {
   display: flex;
   justify-content: center;
 
@@ -32,7 +39,9 @@
       width: 140%;
       border: 1px solid black;
     }
-
   }
 
+  &--margin-bottom {
+    margin-bottom: 100px;
+  }
 }
