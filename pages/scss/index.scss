@@ -62,9 +62,10 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    background-image: url("https://i.ytimg.com/vi/q2WnQEQIZ5M/maxresdefault.jpg");
+    // background-image: url("https://i.ytimg.com/vi/q2WnQEQIZ5M/maxresdefault.jpg");
+    background-image: url("/static/hero-bg.JPG");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 
     &__text {
       font-size: 20px;
@@ -79,7 +80,7 @@
       transform: translate(50%, -50%);
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, #000 20%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 20%);
       transition: transform 0.3s ease-out;
     }
   }
