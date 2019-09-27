@@ -7,7 +7,7 @@ import "./scss/nav.scss";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
@@ -33,37 +33,30 @@ class Nav extends Component {
   }
 
   handleScroll = e => {
-    const { navCheckRunning } = this.state;
-    if (navCheckRunning) {
-      this.setState({ navCheckRunning: false });
-      let scrollInterval = setInterval(() => {
-        if (window.scrollY > 10) {
-          this.setState({ navClass: "nav__active" });
-        } else {
-          this.setState({ navClass: "" });
-        }
-      }, 10);
-      setTimeout(() => {
-        clearInterval(scrollInterval);
-      }, 100);
-    } else {
-      this.setState({ navCheckRunning: true });
+    const { navClass } = this.state;
+    if (window.scrollY > 10 && navClass !== "nav__active") {
+      this.setState({ navClass: "nav__active" });
+    }
+
+    if (window.scrollY <= 10 && navClass !== "") {
+      this.setState({ navClass: "" });
     }
   };
 
   render() {
     const { navClass } = this.state;
-
+    const { pageClass } = this.props;
     return (
-      <nav className={`nav ${navClass}`}>
+      <nav className={`nav ${navClass} ${pageClass}`}>
         <h1 className="nav__logo">
           <FontAwesomeIcon className="nav__logo--icon" icon={faEthernet} />
-          {/* <span className="nav__logo--underline">MICHAEL CALEY</span> */}
         </h1>
         <ul className="nav__links">
           {links.map(({ key, href, label }) => (
             <li className="nav__link" key={key}>
-              <a href={href}>{label}</a>
+              <Link href={href}>
+                <a title={label}>{label}</a>
+              </Link>
             </li>
           ))}
         </ul>

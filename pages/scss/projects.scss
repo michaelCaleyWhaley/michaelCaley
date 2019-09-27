@@ -1,0 +1,29 @@
+.projects {
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.5em;
+    line-height: 1.4;
+    padding: 0 15px;
+  }
+
+  &__sub-title {
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.7;
+    box-sizing: border-box;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    padding: 0 7px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+}

@@ -36,20 +36,23 @@ class Home extends Component {
   };
 
   handleLampMove = e => {
-    clearTimeout(this.handleLampLeave);
+    this.clearLampTimeout();
     const torchPosX =
       e.clientX - this.torchWidth / 2 + this.torchLightWidth / 2;
 
     const torchPosY =
       e.clientY - this.torchHeight / 2 - this.torchLightHeight / 2;
 
-    this.torchLight.style.transform = `translate(${torchPosX}px, ${torchPosY}px)`;
+    this.torchLight.style.transform = `translate3d(${torchPosX}px, ${torchPosY}px, 0)`;
   };
 
-  handleLampLeave = () =>
-    setTimeout(() => {
-      this.torchLight.style.transform = `translate(50%, -50%)`;
+  clearLampTimeout = () => clearTimeout(this.lampTimeout);
+
+  handleLampLeave = () => {
+    this.lampTimeout = setTimeout(() => {
+      this.torchLight.style.transform = `translate3d(50%, -50%, 0)`;
     }, 1500);
+  };
 
   render() {
     return (
@@ -59,8 +62,6 @@ class Home extends Component {
             className="torch"
             ref={this.torchRef}
             onMouseMove={this.handleLampMove}
-            onTouchStart={this.handleLampMove}
-            onTouchEnd={this.handleLampMove}
             onMouseLeave={this.handleLampLeave}
           >
             <div className="torch__light" ref={this.torchLightRef}></div>
@@ -68,15 +69,11 @@ class Home extends Component {
 
           <div className="container">
             <div className="hero__text-area">
-              {/* <h1 className="hero__title hero__title--fade-1">Michael Caley</h1> */}
               <p className="hero__title hero__title--sub">
                 <span className="hero__title--fade-2">RESPONSIBLE</span>{" "}
                 <span className="hero__title--fade-3">/ FRIENDLY</span>{" "}
                 <span className="hero__title--fade-4">/ DEVELOPMENT</span>
               </p>
-              {/* <p className="hero__title hero__title--sub">
-                <span className="hero__title--fade-4">DEVELOPMENT</span>
-              </p> */}
             </div>
           </div>
         </div>
@@ -110,15 +107,15 @@ class Home extends Component {
 
         <div className="container">
           <div className="container__title container__title--centered">
-            <h1 className="projects__title">Latest works</h1>
+            <h1 className="main-projects__title">Latest projects</h1>
           </div>
-          <p className="projects__text">
+          <p className="main-projects__text">
             Curabitur eu adipiscing lacus, a iaculis diam. Nullam placerat
             blandit auctor. Nulla accumsan ipsum et nibh rhoncus, eget tempus
             sapien ultricies. Donec mollis lorem vehicula.
           </p>
 
-          <div className="projects__row">
+          <div className="main-projects__row">
             <div className="project">
               <img
                 src="http://rhythm.bestlooker.pro/images/portfolio/projects-13.jpg"

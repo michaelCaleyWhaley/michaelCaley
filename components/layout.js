@@ -1,12 +1,16 @@
-import Link from "next/link";
+import React from "react";
 import Head from "next/head";
 import Nav from "./nav";
 import Footer from "./footer";
 
 import "./scss/layout.scss";
 
-export default ({ children, title = "Michael Caley Web Developer" }) => (
-  <div>
+export default ({
+  children,
+  title = "Michael Caley Web Developer",
+  pageClass = "",
+}) => (
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -17,8 +21,9 @@ export default ({ children, title = "Michael Caley Web Developer" }) => (
       ></link>
     </Head>
     <header></header>
-    <Nav></Nav>
-    {children}
+    <Nav active={true} pageClass={pageClass} />
+    <div className="layoutClass">{children}</div>
+
     <Footer />
-  </div>
+  </>
 );

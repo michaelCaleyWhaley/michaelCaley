@@ -1,1 +1,7 @@
 # nextJsPortfolio
+
+
+ToDO
+
+PropTypes
+Prettify

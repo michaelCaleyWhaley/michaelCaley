@@ -62,7 +62,6 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    // background-image: url("https://i.ytimg.com/vi/q2WnQEQIZ5M/maxresdefault.jpg");
     background-image: url("/static/hero-bg.JPG");
     background-size: cover;
     background-position: bottom;
@@ -128,7 +127,7 @@
   }
 }
 
-.projects {
+.main-projects {
   &__title {
     margin-bottom: 50px;
   }

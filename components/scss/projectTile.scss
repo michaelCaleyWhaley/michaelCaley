@@ -1,0 +1,42 @@
+@import '../../pages/scss/variables.scss';
+
+.project-tile {
+  position: relative;
+  display: inline-block;
+  padding: 15px 7px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media all and (min-width: $tablet-size) {
+    width: 50%;
+  }
+
+  @media all and (min-width: $desktop-size) {
+    width: 33.3%;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    margin: 4px 0 4px 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+  }
+
+  &__desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.2;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
