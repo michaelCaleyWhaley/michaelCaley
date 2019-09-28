@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Nav from "./nav";
-import Footer from "./footer";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 import "./scss/layout.scss";
 

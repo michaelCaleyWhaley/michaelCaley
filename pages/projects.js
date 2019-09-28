@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Layout from "../components/layout";
-import ProjectTile from "../components/projectTile";
+import Layout from "../components/Layout";
+import SideBar from "../components/Sidebar";
+import ProjectTile from "../components/ProjectTile";
 import projectData from "../components/projectData.json";
 
 import "./scss/projects.scss";
@@ -32,6 +33,7 @@ class Projects extends Component {
             })}
           </div>
         </div>
+        <SideBar />
       </Layout>
     );
   }

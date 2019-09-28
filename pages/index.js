@@ -1,5 +1,5 @@
 import React, { Component, createRef } from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 import "./scss/index.scss";
 import "./scss/sharedLayout.scss";
