@@ -18,7 +18,7 @@ class Projects extends Component {
 
         <div className="container">
           <div className="projects__row">
-            {projectData.map(({ imgSrc, imgAlt, title, desc }, index) => {
+            {projectData.map(({ imgSrc, imgAlt, title, desc, href }, index) => {
               return (
                 <ProjectTile
                   imgSrc={imgSrc}
@@ -26,6 +26,7 @@ class Projects extends Component {
                   title={title}
                   desc={desc}
                   key={title + index}
+                  href={href}
                 />
               );
             })}

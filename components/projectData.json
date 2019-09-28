@@ -1,38 +1,44 @@
 [
   {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
+    "imgSrc": "/static/nextjs-logo.png",
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
   },
   {
     "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
+  },
+  {
+    "imgSrc": "/static/nextjs-logo.png",
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
   },
   {
     "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
+  },
+  {
+    "imgSrc": "/static/nextjs-logo.png",
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
   },
   {
     "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
-  },
-  {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
-  },
-  {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "space",
-    "title": "Space man",
-    "desc": "This guy is really travelling"
+    "imgAlt": "Next JS",
+    "title": "NextJs website",
+    "desc": "Full build website utilising Node, React and NextJs",
+    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
   }
 ]

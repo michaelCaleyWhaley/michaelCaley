@@ -6,6 +6,8 @@
   padding: 15px 7px;
   width: 100%;
   box-sizing: border-box;
+  text-decoration: none;
+
 
   @media all and (min-width: $tablet-size) {
     width: 50%;
@@ -23,6 +25,7 @@
 
   &__title {
     margin: 4px 0 4px 0;
+    color: black;
     padding: 0;
     font-size: 13px;
     font-weight: 400;
@@ -38,5 +41,11 @@
     line-height: 1.2;
     box-sizing: border-box;
     margin: 0;
+  }
+
+  transition: transform 0.3s ease-out;
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }
