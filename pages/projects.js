@@ -19,18 +19,20 @@ class Projects extends Component {
 
         <div className="container">
           <div className="projects__row">
-            {projectData.map(({ imgSrc, imgAlt, title, desc, href }, index) => {
-              return (
-                <ProjectTile
-                  imgSrc={imgSrc}
-                  imgAlt={imgAlt}
-                  title={title}
-                  desc={desc}
-                  key={title + index}
-                  href={href}
-                />
-              );
-            })}
+            {projectData.map(
+              ({ imgSrc, imgAlt, title, desc, sidebarData }, index) => {
+                return (
+                  <ProjectTile
+                    imgSrc={imgSrc}
+                    imgAlt={imgAlt}
+                    title={title}
+                    desc={desc}
+                    key={title + index}
+                    sidebarData={sidebarData}
+                  />
+                );
+              },
+            )}
           </div>
         </div>
         <SideBar />

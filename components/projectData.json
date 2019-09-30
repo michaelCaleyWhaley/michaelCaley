@@ -4,41 +4,47 @@
     "imgAlt": "Next JS",
     "title": "NextJs website",
     "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
+    "sidebarData": {
+      "title": "NEXT.js",
+      "paraMain": "A full website build using the NEXT.js framework. This technology allows for fast and straight forward development using Node and React. NEXT handles alot out of the box and provides a great foundation to build from.",
+      "imgSrc": "/static/nextjs-logo.png",
+      "imgAlt": "Next JS",
+      "paraAlt": "A useful feature you may notice in this build is the usage of customEvents with ProjectTile components. The slide out sidebar listens for an event which has all the data it needs to be populated with attached. This allows the sidebar component to be completely decoupled from the ProjectTiles",
+      "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio",
+      "hrefTitle": "NEXT.js project link",
+      "hrefText": " Project link"
+    }
   },
   {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "Next JS",
-    "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
+    "imgSrc": "/static/squares.jpg",
+    "imgAlt": "square pattern",
+    "title": "3D CUBES",
+    "desc": "Responsive 3D cubes using CSS and JS",
+    "sidebarData": {
+      "title": "3D CUBES",
+      "paraMain": "As part of a marketing campaign I was asked to create a responsive 3D cube without the use of canvas. At the time the company was not comfortable with the use of canvas on the homepage and specifically wanted it to be created in the DOM. A quick scour of the unbranded search engine revealed many examples of none responsive cubes, with the limiting factor being the inability of translateZ to accept a responsive property such as %, or VW.",
+      "imgSrc": "/static/squares.jpg",
+      "imgAlt": "square patten",
+      "paraAlt": "A couple of years have passed since I created this so the JS shows signs of age, however I still find the result to be visually impressive.",
+      "href": "https://codepen.io/mikeCaley/full/evaEyr",
+      "hrefTitle": "codepen 3D cube link",
+      "hrefText": " Project link"
+    }
   },
   {
-    "imgSrc": "/static/nextjs-logo.png",
-    "imgAlt": "Next JS",
-    "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
-  },
-  {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "Next JS",
-    "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
-  },
-  {
-    "imgSrc": "/static/nextjs-logo.png",
-    "imgAlt": "Next JS",
-    "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
-  },
-  {
-    "imgSrc": "http://rhythm.bestlooker.pro/images/portfolio/projects-4.jpg",
-    "imgAlt": "Next JS",
-    "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
-    "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio"
+    "imgSrc": "/static/spaceman.jpg",
+    "imgAlt": "astronaut waving",
+    "title": "Todo app",
+    "desc": "App built using Node and MongoDB",
+    "sidebarData": {
+      "title": "Todo App",
+      "paraMain": "My first complete project using Node. The app provides a number of endpoints via Express.js which allow a user to interact with a MongoDB database. An example would be the /todos endpoint which allows you to add a todo to the database using a shape specified by the todo model. To simplify the interactions between Express and Mongo I used a library called Mongoose, which provides a nuber of easy to use methods for Mongo database interaction.",
+      "imgSrc": "/static/spaceman.jpg",
+      "imgAlt": "astronaut waving",
+      "paraAlt": "",
+      "href": "https://github.com/michaelCaleyWhaley/monogodb-todo",
+      "hrefTitle": "Todo app repository",
+      "hrefText": " Project link"
+    }
   }
 ]

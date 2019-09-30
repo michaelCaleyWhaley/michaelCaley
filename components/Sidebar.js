@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../components/scss/sidebar.scss";
 
 class SideBar extends Component {
   constructor() {
     super();
-
+    this.overlayRef = React.createRef();
     this.state = { openStatus: false };
   }
 
@@ -12,20 +14,78 @@ class SideBar extends Component {
     document.addEventListener("open-sidebar", this.handleOpenEvent);
   }
 
-  handleOpenEvent = () => {
-    this.setState({ openStatus: true });
+  handleOpenEvent = data => {
+    const {
+      title,
+      paraMain,
+      imgSrc,
+      imgAlt,
+      paraAlt,
+      href,
+      hrefTitle,
+      hrefText,
+    } = data.detail;
+    this.setState({
+      openStatus: true,
+      title,
+      paraMain,
+      imgSrc,
+      imgAlt,
+      paraAlt,
+      href,
+      hrefTitle,
+      hrefText,
+    });
+
+    document.body.classList.add("body__lock");
+  };
+
+  closeSideBar = () => {
+    this.setState({ openStatus: false });
+    document.body.classList.remove("body__lock");
   };
 
   render() {
-    const { openStatus } = this.state;
+    const {
+      openStatus,
+      title,
+      paraMain,
+      imgSrc,
+      imgAlt,
+      paraAlt,
+      href,
+      hrefTitle,
+      hrefText,
+    } = this.state;
     const sidebarClass = openStatus ? "sidebar sidebar--open" : "sidebar";
     const overlayClass = openStatus
       ? "sidebar__overlay sidebar__overlay--open"
       : "sidebar__overlay";
     return (
       <>
-        <div className={overlayClass}></div>
-        <div className={sidebarClass}>Sidebar</div>
+        <div
+          ref={this.overlayRef}
+          className={overlayClass}
+          onClick={this.closeSideBar}
+        ></div>
+        <div className={sidebarClass}>
+          <button className="sidebar__close" onClick={this.closeSideBar}>
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+
+          <h1 className="sidebar__title">{title}</h1>
+          <p className="sidebar__text">{paraMain}</p>
+          <img src={imgSrc} alt={imgAlt} />
+          <p className="sidebar__text">{paraAlt}</p>
+          <a
+            href={href}
+            title={hrefTitle}
+            className="sidebar__link"
+            target="_blank"
+          >
+            {hrefText}
+          </a>
+        </div>
       </>
     );
   }
