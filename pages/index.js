@@ -1,5 +1,7 @@
 import React, { Component, createRef } from "react";
+import Link from "next/link";
 import Layout from "../components/Layout";
+import projectData from "../components/projectData.json";
 
 import "./scss/index.scss";
 import "./scss/sharedLayout.scss";
@@ -52,6 +54,14 @@ class Home extends Component {
     this.lampTimeout = setTimeout(() => {
       this.torchLight.style.transform = `translate3d(50%, -50%, 0)`;
     }, 1500);
+  };
+
+  generateMostRecentProjects = () => {
+    let recentProjects = [];
+    for (let i = 0; i < 3; i++) {
+      recentProjects.push(projectData[i]);
+    }
+    return recentProjects;
   };
 
   render() {
@@ -116,24 +126,18 @@ class Home extends Component {
           </p>
 
           <div className="main-projects__row">
-            <div className="project">
-              <img
-                src="http://rhythm.bestlooker.pro/images/portfolio/projects-13.jpg"
-                alt="project"
-              />
-            </div>
-            <div className="project project--padded">
-              <img
-                src="http://rhythm.bestlooker.pro/images/portfolio/projects-14.jpg"
-                alt="project"
-              />
-            </div>
-            <div className="project">
-              <img
-                src="http://rhythm.bestlooker.pro/images/portfolio/projects-15.jpg"
-                alt="project"
-              />
-            </div>
+            {this.generateMostRecentProjects().map((project, index) => (
+              <div
+                className={index === 1 ? "project project--padded" : "project"}
+                key={`project-${index}`}
+              >
+                <Link href="/projects">
+                  <a title={project.title}>
+                    <img src={project.imgSrc} alt={project.imgAlt} />
+                  </a>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </Layout>
