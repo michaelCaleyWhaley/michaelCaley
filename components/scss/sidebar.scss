@@ -1,8 +1,10 @@
+@import '../../pages/scss/variables.scss';
+
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 375px;
+  width: 100%;
   height: 100%;
   background-color: #fff;
   z-index: 5;
@@ -12,6 +14,10 @@
   transform: translateX(100%);
   transition: transform 0.3s ease-out;
   overflow: auto;
+
+  @media all and (min-width: $mobile-size) {
+    width: $mobile-size;
+  }
 
   &--open {
     transform: translateX(0);
@@ -42,6 +48,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: white;
 
     svg {
       position: absolute;

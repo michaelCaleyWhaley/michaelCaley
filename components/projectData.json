@@ -16,6 +16,22 @@
     }
   },
   {
+    "imgSrc": "/static/spaceman.jpg",
+    "imgAlt": "astronaut waving",
+    "title": "Todo app",
+    "desc": "App built using Node and MongoDB",
+    "sidebarData": {
+      "title": "Todo App",
+      "paraMain": "My first complete project using Node. The app provides a number of endpoints via Express.js which allow a user to interact with a MongoDB database. An example would be the /todos endpoint which allows you to add a todo to the database using a shape specified by the todo model. To simplify the interactions between Express and Mongo I used a library called Mongoose, which provides a nuber of easy to use methods for Mongo database interaction.",
+      "imgSrc": "/static/spaceman.jpg",
+      "imgAlt": "astronaut waving",
+      "paraAlt": "",
+      "href": "https://github.com/michaelCaleyWhaley/monogodb-todo",
+      "hrefTitle": "Todo app repository",
+      "hrefText": " Project link"
+    }
+  },
+  {
     "imgSrc": "/static/squares.jpg",
     "imgAlt": "square pattern",
     "title": "3D CUBES",
@@ -32,18 +48,18 @@
     }
   },
   {
-    "imgSrc": "/static/spaceman.jpg",
-    "imgAlt": "astronaut waving",
-    "title": "Todo app",
-    "desc": "App built using Node and MongoDB",
+    "imgSrc": "/static/expenses.jpg",
+    "imgAlt": "financial ledger",
+    "title": "Expensify",
+    "desc": "Simple expenses app built using React",
     "sidebarData": {
-      "title": "Todo App",
-      "paraMain": "My first complete project using Node. The app provides a number of endpoints via Express.js which allow a user to interact with a MongoDB database. An example would be the /todos endpoint which allows you to add a todo to the database using a shape specified by the todo model. To simplify the interactions between Express and Mongo I used a library called Mongoose, which provides a nuber of easy to use methods for Mongo database interaction.",
-      "imgSrc": "/static/spaceman.jpg",
-      "imgAlt": "astronaut waving",
+      "title": "Expensify",
+      "paraMain": "",
+      "imgSrc": "/static/expenses.jpg",
+      "imgAlt": "financial ledger",
       "paraAlt": "",
-      "href": "https://github.com/michaelCaleyWhaley/monogodb-todo",
-      "hrefTitle": "Todo app repository",
+      "href": "https://github.com/michaelCaleyWhaley/expensesApp__React",
+      "hrefTitle": "Expenses app repository",
       "hrefText": " Project link"
     }
   }
