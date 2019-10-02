@@ -11,6 +11,8 @@ class Home extends Component {
     super();
     this.torchRef = createRef();
     this.torchLightRef = createRef();
+
+    this.state = { isMobile: false };
   }
 
   componentDidMount() {
@@ -22,14 +24,17 @@ class Home extends Component {
     this.torchLightWidth = this.torchLight.clientWidth;
     this.torchLightHeight = this.torchLight.clientHeight;
 
-    window.addEventListener("resize", this.adjustMeasurements);
+    this.window = window;
+    this.window.addEventListener("resize", this.adjustMeasurements);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.adjustMeasurements);
+    this.window.removeEventListener("resize", this.adjustMeasurements);
   }
 
   adjustMeasurements = () => {
+    this.setState({ isMobile: this.window.innerWidth <= 600 });
+
     this.torchWidth = this.torch.clientWidth;
     this.torchHeight = this.torch.clientHeight;
 
@@ -38,13 +43,13 @@ class Home extends Component {
   };
 
   handleLampMove = e => {
+    const { isMobile } = this.state;
+    if (isMobile) return;
     this.clearLampTimeout();
     const torchPosX =
       e.clientX - this.torchWidth / 2 + this.torchLightWidth / 2;
-
     const torchPosY =
       e.clientY - this.torchHeight / 2 - this.torchLightHeight / 2;
-
     this.torchLight.style.transform = `translate3d(${torchPosX}px, ${torchPosY}px, 0)`;
   };
 

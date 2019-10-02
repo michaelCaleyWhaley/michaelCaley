@@ -1,13 +1,17 @@
+@import './variables.scss';
+
 .hero {
   position: relative;
   width: 100%;
-  padding-bottom: 30%;
-  max-height: 500px;
 
-  @media all and (max-width: 700px) {
-    padding-bottom: 0;
-    height: 100vh;
-    max-height: 1000px;
+  padding-bottom: 130%;
+  max-height: 500px;
+  height: auto;
+
+  @media all and (min-width: $tablet-size) {
+    padding-bottom: 30%;
+    max-height: 500px;
+    height: auto;
   }
 
   &__text-area {
@@ -51,7 +55,7 @@
     &--sub {
       font-size: 14px;
       letter-spacing: 2.5px;
-      line-height: 14px;
+      line-height: 20px;
       font-weight: 300;
       margin: 0;
     }
@@ -79,8 +83,12 @@
       transform: translate(50%, -50%);
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 20%);
       transition: transform 0.3s ease-out;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%);
+
+      @media all and (min-width: $tablet-size) {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 20%);
+      }
     }
   }
 }
@@ -115,7 +123,11 @@
 }
 
 .about {
-  display: flex;
+  display: block;
+
+  @media all and (min-width: $tablet-size) {
+    display: flex;
+  }
 
   &__text {
     padding: 0 15px;
@@ -140,11 +152,20 @@
     padding: 0 15px;
     max-width: 620px;
     margin: 0 auto 50px;
-    text-align: center;
+    text-align: left;
+
+    @media all and (min-width: $tablet-size) {
+      text-align: center;
+    }
   }
 
   &__row {
-    display: flex;
+    display: block;
+
+    @media all and (min-width: $tablet-size) {
+      display: flex;
+    }
+
     width: 100%;
     padding: 0 15px;
     box-sizing: border-box;
@@ -154,6 +175,10 @@
 .project {
 
   &--padded {
-    padding: 0 15px;
+    padding: 15px 0;
+
+    @media all and (min-width: $tablet-size) {
+      padding: 0 15px;
+    }
   }
 }

@@ -19,6 +19,7 @@ export default ({
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
         rel="stylesheet"
       ></link>
+      <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
     </Head>
     <header></header>
     <Nav active={true} pageClass={pageClass} />
