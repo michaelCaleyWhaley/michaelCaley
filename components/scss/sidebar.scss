@@ -34,7 +34,7 @@
 
     &--open {
       left: 0;
-      background-color: rgba(0, 0, 0, .48);
+      background-color: rgba(0, 0, 0, 0.48);
     }
   }
 
@@ -92,4 +92,7 @@
 .body__lock {
   height: 100%;
   overflow: hidden;
+  @media all and (min-width: $tablet-size) {
+    margin-right: 15px;
+  }
 }

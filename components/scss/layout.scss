@@ -2,6 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+
+  .layout-preload * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
 }
 
 h1 {

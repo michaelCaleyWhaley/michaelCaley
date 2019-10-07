@@ -82,6 +82,7 @@ class Home extends Component {
             ref={this.torchRef}
             onMouseMove={this.handleLampMove}
             onMouseLeave={this.handleLampLeave}
+            onMouseEnter={this.adjustMeasurements}
           >
             <div
               className="torch__light"
