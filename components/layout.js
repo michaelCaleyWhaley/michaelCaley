@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import Head from 'next/head';
-import Nav from './Nav';
-import Footer from './Footer';
+import Nav from './nav';
+import Footer from './footer';
 
 import './scss/layout.scss';
 

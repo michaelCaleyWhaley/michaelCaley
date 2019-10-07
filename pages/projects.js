@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Layout from "../components/Layout";
-import SideBar from "../components/Sidebar";
-import ProjectTile from "../components/ProjectTile";
+import Layout from "../components/layout";
+import SideBar from "../components/sidebar";
+import ProjectTile from "../components/projectTile";
 import projectData from "../components/projectData.json";
 
 import "./scss/projects.scss";
