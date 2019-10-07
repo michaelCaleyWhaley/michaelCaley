@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import "../components/scss/sidebar.scss";
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import '../components/scss/sidebar.scss';
 
 class SideBar extends Component {
   constructor() {
@@ -11,7 +11,7 @@ class SideBar extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("open-sidebar", this.handleOpenEvent);
+    document.addEventListener('open-sidebar', this.handleOpenEvent);
   }
 
   handleOpenEvent = data => {
@@ -37,12 +37,12 @@ class SideBar extends Component {
       hrefText,
     });
 
-    document.body.classList.add("body__lock");
+    document.body.classList.add('body__lock');
   };
 
   closeSideBar = () => {
     this.setState({ openStatus: false });
-    document.body.classList.remove("body__lock");
+    document.body.classList.remove('body__lock');
   };
 
   render() {
@@ -51,16 +51,18 @@ class SideBar extends Component {
       title,
       paraMain,
       imgSrc,
-      imgAlt,
+      imgAlt = 'placeholder image for projects',
       paraAlt,
       href,
       hrefTitle,
       hrefText,
     } = this.state;
-    const sidebarClass = openStatus ? "sidebar sidebar--open" : "sidebar";
+    const sidebarClass = openStatus
+      ? 'sidebar sidebar--open'
+      : 'sidebar';
     const overlayClass = openStatus
-      ? "sidebar__overlay sidebar__overlay--open"
-      : "sidebar__overlay";
+      ? 'sidebar__overlay sidebar__overlay--open'
+      : 'sidebar__overlay';
     return (
       <>
         <div
@@ -69,7 +71,11 @@ class SideBar extends Component {
           onClick={this.closeSideBar}
         ></div>
         <div className={sidebarClass}>
-          <button className="sidebar__close" onClick={this.closeSideBar}>
+          <button
+            aria-label="close the sidebar"
+            className="sidebar__close"
+            onClick={this.closeSideBar}
+          >
             <FontAwesomeIcon icon={faTimes} />
           </button>
 

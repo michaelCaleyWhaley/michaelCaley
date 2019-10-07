@@ -1,5 +1,5 @@
+@import './variables.scss';
 .projects {
-
   &__title {
     font-size: 18px;
     font-weight: 400;
@@ -14,7 +14,7 @@
     padding: 0 15px;
     font-size: 15px;
     font-weight: 300;
-    color: #777;
+    color: $grey;
     line-height: 1.7;
     box-sizing: border-box;
   }

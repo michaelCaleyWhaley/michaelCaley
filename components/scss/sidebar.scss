@@ -72,7 +72,7 @@
     display: inline-block;
     font-size: 15px;
     font-weight: 300;
-    color: #777;
+    color: $grey;
     line-height: 1.7;
 
     &--heavy {
@@ -83,7 +83,7 @@
   &__link {
     display: inline-block;
     font-size: 11px;
-    color: #777;
+    color: $grey;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
