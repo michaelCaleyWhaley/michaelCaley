@@ -1,9 +1,9 @@
 import React, { Component, createRef } from 'react';
 import Link from 'next/link';
-import Layout from '../components/layout';
-import ProjectTile from '../components/projectTile';
+import Layout from '../components/Layout';
+import SideBar from '../components/Sidebar';
+import ProjectTile from '../components/ProjectTile';
 import projectData from '../components/projectData.json';
-import SideBar from '../components/sidebar';
 import './scss/index.scss';
 import './scss/sharedLayout.scss';
 
