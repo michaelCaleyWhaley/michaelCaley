@@ -32,34 +32,34 @@
     }
   },
   {
-    "imgSrc": "/static/squares.jpg",
-    "imgAlt": "square pattern",
-    "title": "3D CUBES",
-    "desc": "Responsive 3D cubes using CSS and JS",
-    "sidebarData": {
-      "title": "3D CUBES",
-      "paraMain": "As part of a marketing campaign I was asked to create a responsive 3D cube without the use of canvas. At the time the company was not comfortable with the use of canvas on the homepage and specifically wanted it to be created in the DOM. A quick scour of the unbranded search engine revealed many examples of none responsive cubes, with the limiting factor being the inability of translateZ to accept a responsive property such as %, or VW.",
-      "imgSrc": "/static/squares.jpg",
-      "imgAlt": "square patten",
-      "paraAlt": "A couple of years have passed since I created this so the JS shows signs of age, however I still find the result to be visually impressive.",
-      "href": "https://codepen.io/mikeCaley/full/evaEyr",
-      "hrefTitle": "codepen 3D cube link",
-      "hrefText": " Project link"
-    }
-  },
-  {
     "imgSrc": "/static/expenses.jpg",
     "imgAlt": "financial ledger",
     "title": "Expensify",
     "desc": "Simple expenses app built using React",
     "sidebarData": {
       "title": "Expensify",
-      "paraMain": "",
+      "paraMain": "This app is a front-end only expense management system. I built this as an exercise in React, Redux and React Router.",
       "imgSrc": "/static/expenses.jpg",
       "imgAlt": "financial ledger",
-      "paraAlt": "",
+      "paraAlt": "Normal React applications store state for each component in their own compartment. This means if you want one component to talk to another you have to pass data around as Props. Sometimes this is an adequate solution, however another option is to use something like Redux which provides a shared state which any component can be connected to. ",
       "href": "https://github.com/michaelCaleyWhaley/expensesApp__React",
       "hrefTitle": "Expenses app repository",
+      "hrefText": " Project link"
+    }
+  },
+  {
+    "imgSrc": "/static/squares.jpg",
+    "imgAlt": "square pattern",
+    "title": "3D CUBES",
+    "desc": "Responsive 3D cubes using CSS and JS",
+    "sidebarData": {
+      "title": "3D CUBES",
+      "paraMain": "Whilst investigating the usage of canvas I wondered how difficult it would be to create 3D objects using purely elements in the DOM. A quick search revealed nothing quite like what I had in mind, and nothing responsive. Initial attempts were pure CSS, however I realised that we had no access to responsive values on the Z plane in CSS so had to bring JavaScript in to do some of the computational lifting.",
+      "imgSrc": "/static/squares.jpg",
+      "imgAlt": "square patten",
+      "paraAlt": "Some time has passed since I created this project so when I look back now, I see areas requiring improvement, such as the structure of the JS. However, I believe the look and functional of the cubes is good and is still of interest. ",
+      "href": "https://codepen.io/mikeCaley/full/evaEyr",
+      "hrefTitle": "codepen 3D cube link",
       "hrefText": " Project link"
     }
   }

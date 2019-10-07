@@ -38,6 +38,16 @@
       height: 140%;
       width: 140%;
       border: 1px solid black;
+      pointer-events: none;
+    }
+
+    &--link {
+      color: black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
   }
 
