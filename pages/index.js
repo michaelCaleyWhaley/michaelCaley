@@ -12,7 +12,6 @@ class Home extends Component {
     super();
     this.torchRef = createRef();
     this.torchLightRef = createRef();
-
     this.state = { isMobile: false };
   }
 
