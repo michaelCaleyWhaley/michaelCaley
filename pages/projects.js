@@ -9,14 +9,13 @@ import "./scss/projects.scss";
 class Projects extends Component {
   render() {
     return (
-      <Layout className="projects" pageClass="nav--projects">
+      <Layout pageClass="nav--projects">
         <div className="container">
           <h1 className="projects__title">PROJECTS</h1>
           <h2 className="projects__sub-title">
             Anything worth doing takes patience and hard work.
           </h2>
         </div>
-
         <div className="container">
           <div className="projects__row">
             {projectData.map(
@@ -31,7 +30,7 @@ class Projects extends Component {
                     sidebarData={sidebarData}
                   />
                 );
-              },
+              }
             )}
           </div>
         </div>

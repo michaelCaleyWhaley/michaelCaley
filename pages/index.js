@@ -1,10 +1,11 @@
-import React, { Component, createRef } from "react";
-import Link from "next/link";
-import Layout from "../components/Layout";
-import projectData from "../components/projectData.json";
-
-import "./scss/index.scss";
-import "./scss/sharedLayout.scss";
+import React, { Component, createRef } from 'react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import ProjectTile from '../components/ProjectTile';
+import projectData from '../components/projectData.json';
+import SideBar from '../components/Sidebar';
+import './scss/index.scss';
+import './scss/sharedLayout.scss';
 
 class Home extends Component {
   constructor() {
@@ -25,11 +26,14 @@ class Home extends Component {
     this.torchLightHeight = this.torchLight.clientHeight;
 
     this.window = window;
-    this.window.addEventListener("resize", this.adjustMeasurements);
+    this.window.addEventListener('resize', this.adjustMeasurements);
   }
 
   componentWillUnmount() {
-    this.window.removeEventListener("resize", this.adjustMeasurements);
+    this.window.removeEventListener(
+      'resize',
+      this.adjustMeasurements,
+    );
   }
 
   adjustMeasurements = () => {
@@ -79,15 +83,24 @@ class Home extends Component {
             onMouseMove={this.handleLampMove}
             onMouseLeave={this.handleLampLeave}
           >
-            <div className="torch__light" ref={this.torchLightRef}></div>
+            <div
+              className="torch__light"
+              ref={this.torchLightRef}
+            ></div>
           </div>
 
           <div className="container">
             <div className="hero__text-area">
               <p className="hero__title hero__title--sub">
-                <span className="hero__title--fade-2">RESPONSIBLE</span>{" "}
-                <span className="hero__title--fade-3">/ FRIENDLY</span>{" "}
-                <span className="hero__title--fade-4">/ DEVELOPMENT</span>
+                <span className="hero__title--fade-2">
+                  RESPONSIBLE
+                </span>{' '}
+                <span className="hero__title--fade-3">
+                  / FRIENDLY
+                </span>{' '}
+                <span className="hero__title--fade-4">
+                  / DEVELOPMENT
+                </span>
               </p>
             </div>
           </div>
@@ -98,22 +111,24 @@ class Home extends Component {
           </div>
           <div className="about">
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              maximus ligula semper metus pellentesque mattis. Maecenas
-              volutpat, diam enim sagittis quam, id porta quam. Sed id dolor
-              consectetur fermentum nibh volutpat, accumsan purus.
+              Hello, my name is Michael Caley and I am a web developer
+              from North East England currently living and working in
+              central London. I have a passion for code, an aptitude
+              for computers, and over 7 years of experience.
             </p>
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              maximus ligula semper metus pellentesque mattis. Maecenas
-              volutpat, diam enim sagittis quam, id porta quam. Sed id dolor
-              consectetur fermentum nibh volutpat, accumsan purus.
+              For the past 3+ years I have been a developer on River
+              Islands core team, which means I have had the
+              opportunity to work towards their React transformation
+              in addition to other interesting projects such as
+              reducing API calls by leveraging local storage.
             </p>
             <p className="about__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              maximus ligula semper metus pellentesque mattis. Maecenas
-              volutpat, diam enim sagittis quam, id porta quam. Sed id dolor
-              consectetur fermentum nibh volutpat, accumsan purus.
+              Outside of RI I have successfully launched projects of
+              my own, such as brochure websites, Custom video players,
+              ecommerce websites, and games. When it’s time to turn
+              off the computer I have been known to spend time
+              bouldering, hiking and listening to audiobooks.
             </p>
           </div>
         </div>
@@ -125,26 +140,29 @@ class Home extends Component {
             <h1 className="main-projects__title">Latest projects</h1>
           </div>
           <p className="main-projects__text">
-            Curabitur eu adipiscing lacus, a iaculis diam. Nullam placerat
-            blandit auctor. Nulla accumsan ipsum et nibh rhoncus, eget tempus
-            sapien ultricies. Donec mollis lorem vehicula.
+            Below you’ll find a selection of my latest projects with
+            links to their source code and/or an example. Please head
+            over to the projects page to{' '}
+            <Link href="/projects">
+              <a title="projects page">see more.</a>
+            </Link>
           </p>
-
           <div className="main-projects__row">
-            {this.generateMostRecentProjects().map((project, index) => (
-              <div
-                className={index === 1 ? "project project--padded" : "project"}
-                key={`project-${index}`}
-              >
-                <Link href="/projects">
-                  <a title={project.title}>
-                    <img src={project.imgSrc} alt={project.imgAlt} />
-                  </a>
-                </Link>
-              </div>
-            ))}
+            {this.generateMostRecentProjects().map(
+              (project, index) => (
+                <ProjectTile
+                  imgSrc={project.imgSrc}
+                  imgAlt={project.imgAlt}
+                  title={project.title}
+                  desc={project.desc}
+                  sidebarData={project.sidebarData}
+                  key={`project-${index}`}
+                />
+              ),
+            )}
           </div>
         </div>
+        <SideBar />
       </Layout>
     );
   }

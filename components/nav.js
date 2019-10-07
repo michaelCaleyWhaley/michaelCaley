@@ -7,7 +7,7 @@ import "./scss/nav.scss";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Projects" }
   // { href: "/contact", label: "Contact" },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
@@ -20,7 +20,7 @@ class Nav extends Component {
 
     this.state = {
       navClass: "",
-      navCheckRunning: false,
+      navCheckRunning: false
     };
   }
 
@@ -48,9 +48,11 @@ class Nav extends Component {
     const { pageClass } = this.props;
     return (
       <nav className={`nav ${navClass} ${pageClass}`}>
-        <h1 className="nav__logo">
-          <FontAwesomeIcon className="nav__logo--icon" icon={faEthernet} />
-        </h1>
+        <Link href="/">
+          <a className="nav__logo" title="home page">
+            <FontAwesomeIcon className="nav__logo--icon" icon={faEthernet} />
+          </a>
+        </Link>
         <ul className="nav__links">
           {links.map(({ key, href, label }) => (
             <li className="nav__link" key={key}>

@@ -19,7 +19,7 @@
     left: 15px;
     top: 50%;
     transform: translate(0, -50%);
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 0.8);
     pointer-events: none;
     letter-spacing: 2px;
   }
@@ -29,7 +29,6 @@
     font-weight: 500;
     font-size: 31px;
     line-height: 31px;
-
 
     &--fade-1 {
       animation: titleFade 0.5s ease-out forwards;
@@ -45,11 +44,11 @@
     }
 
     &--fade-3 {
-      animation-delay: 1s
+      animation-delay: 1s;
     }
 
     &--fade-4 {
-      animation-delay: 1.5s
+      animation-delay: 1.5s;
     }
 
     &--sub {
@@ -66,7 +65,7 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    background-image: url("/static/hero-bg.JPG");
+    background-image: url('/static/hero-bg.JPG');
     background-size: cover;
     background-position: bottom;
 
@@ -84,10 +83,18 @@
       width: 200%;
       height: 200%;
       transition: transform 0.3s ease-out;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 0.7) 50%
+      );
 
       @media all and (min-width: $tablet-size) {
-        background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 20%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.9) 20%
+        );
       }
     }
   }
@@ -136,6 +143,10 @@
     color: #777;
     line-height: 1.7;
     box-sizing: border-box;
+
+    @media all and (min-width: $tablet-size) {
+      width: 33%;
+    }
   }
 }
 
@@ -173,12 +184,16 @@
 }
 
 .project {
-
+  transition: transform 0.3s ease-out;
   &--padded {
     padding: 15px 0;
 
     @media all and (min-width: $tablet-size) {
       padding: 0 15px;
     }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }
