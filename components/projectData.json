@@ -16,6 +16,22 @@
     }
   },
   {
+    "imgSrc": "/static/flashlight_night.jpg",
+    "imgAlt": "Torch light animation",
+    "title": "Torch light",
+    "desc": "Code snippet show casing a torch effect users can interact with",
+    "sidebarData": {
+      "title": "Torch light",
+      "paraMain": "This code snippet was inspired from a similar effect I saw on Codepen which I felt had been down in an overly complicated way (Unfortunately, at the time of writing the original inspiration is lost to me).",
+      "imgSrc": "/static/flashlight_night.jpg",
+      "imgAlt": "Night time torch light",
+      "paraAlt": "In this version a very simple setup is required. A container with a background image, and a child which is position absolute, and twice the width and height of the parent. The child has a radial-gradient background which allows it to be completely dark with the exception of a circle at the centre. On mouse over you simply move the centre of the child to the mouse coordinates.",
+      "href": "https://codepen.io/mikeCaley/pen/xxKpNeQ",
+      "hrefTitle": "Torch light codepen link",
+      "hrefText": " Project link"
+    }
+  },
+  {
     "imgSrc": "/static/spaceman.jpg",
     "imgAlt": "astronaut waving",
     "title": "Todo app",
