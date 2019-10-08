@@ -92,7 +92,4 @@
 .body__lock {
   height: 100%;
   overflow: hidden;
-  @media all and (min-width: $tablet-size) {
-    margin-right: 15px;
-  }
 }
