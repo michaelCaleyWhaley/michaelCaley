@@ -26,7 +26,6 @@ class SideBar extends Component {
       hrefText,
     } = data.detail;
     this.setState({
-      openStatus: true,
       title,
       paraMain,
       imgSrc,
@@ -35,6 +34,7 @@ class SideBar extends Component {
       href,
       hrefTitle,
       hrefText,
+      openStatus: true,
     });
 
     document.body.classList.add('body__lock');
