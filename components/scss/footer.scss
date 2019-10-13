@@ -1,13 +1,24 @@
-.footer {
-  &__title {
-    width: 22px;
-    margin-bottom: 30px;
-  }
-}
+@import '../../pages/scss/variables.scss';
+
+// .footer {
+//   font-size: 10px;
+//   color: $grey;
+
+//   color: &__title {
+//     width: 22px;
+//     margin-bottom: 30px;
+//   }
+// }
 
 .footer-row {
   display: flex;
   justify-content: center;
+
+  &__signature {
+    font-size: 10px;
+    color: $grey;
+    text-transform: uppercase;
+  }
 
   &__icon {
     position: relative;

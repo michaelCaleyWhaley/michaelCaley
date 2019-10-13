@@ -52,7 +52,9 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer-row">
-        <p>Michael Caley {new Date().getFullYear()}</p>
+        <p className="footer-row__signature">
+          Michael Caley &middot; {new Date().getFullYear()}
+        </p>
       </div>
     </div>
   </footer>

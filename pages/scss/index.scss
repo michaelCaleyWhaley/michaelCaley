@@ -137,8 +137,9 @@
   }
 
   &__text {
+    text-align: justify;
     padding: 0 15px;
-    font-size: 15px;
+    font-size: $font-size;
     font-weight: 300;
     color: $grey;
     line-height: 1.7;
@@ -156,7 +157,7 @@
   }
 
   &__text {
-    font-size: 15px;
+    font-size: $font-size;
     font-weight: 300;
     color: $grey;
     line-height: 1.7;
