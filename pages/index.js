@@ -113,15 +113,17 @@ class Home extends Component {
             <p className="about__text">
               Hello, my name is Michael Caley and I am a web developer
               from North East England currently living and working in
-              central London. I have a passion for code, an aptitude
-              for computers, and over 7 years of experience.
+              central London. If you’re looking for someone with years
+              of experience using ES6, React, Jest, HTML5, CSS3 and
+              other cool sounding things, you have found me.
             </p>
             <p className="about__text">
               For the past 3+ years I have been a developer on River
-              Islands core team, which means I have had the
+              Islands core team. During that time I have had the
               opportunity to work towards their React transformation
-              in addition to other interesting projects such as
-              reducing API calls by leveraging local storage.
+              in addition to other exciting projects such as
+              personalising product recommendations, and optimising
+              SDK’s by leveraging local storage.
             </p>
             <p className="about__text">
               Outside of RI I have successfully launched projects of
