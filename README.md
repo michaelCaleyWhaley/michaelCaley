@@ -1,4 +1,6 @@
-# nextJsPortfolio
+# michaelCaley
+
+Portfolio website created using React framework Next.js.
 
 
 ToDO
