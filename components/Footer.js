@@ -13,12 +13,12 @@ import '../pages/scss/sharedLayout.scss';
 const Footer = () => (
   <footer>
     <div className="container">
-      <div className="footer-row">
+      {/* <div className="footer-row">
         <FontAwesomeIcon
           className="footer__title"
           icon={faEthernet}
         />
-      </div>
+      </div> */}
       <div className="footer-row footer-row--margin-bottom">
         <div className="footer-row__icon">
           <a
