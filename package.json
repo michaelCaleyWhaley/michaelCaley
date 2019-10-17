@@ -1,9 +1,6 @@
 {
-  "name": "caley-portfolio",
+  "name": "michaelCaley",
   "version": "0.1.0",
-  "engines": {
-    "node": "8.11.3"
-  },
   "private": true,
   "scripts": {
     "dev": "next",
