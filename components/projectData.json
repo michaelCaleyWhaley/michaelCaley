@@ -1,5 +1,21 @@
 [
   {
+    "imgSrc": "/static/lightning.jpg",
+    "imgAlt": "Weather App",
+    "title": "Reducing network calls",
+    "desc": "Reducing network calls by caching API responses",
+    "sidebarData": {
+      "title": "Reducing network calls",
+      "paraMain": "Reducing network activity is one of the pieces in a fast performing application. This example stores your weather forecast along with your location in local storage. Then on further requests checks whether the previous forecast is out of date, or whether your location has changed. If either condition is true it will make a call to the api, else it will retrieve the previous forecast.",
+      "imgSrc": "/static/lightning.jpg",
+      "imgAlt": "Weather App",
+      "paraAlt": "This project handles it's API routes with Express JS which gives it the ability to not only cache responses on the client side, but also on the server side for greater reuse of forecasts. The response is then handed over to NEXT.js which handles the front end routes.",
+      "href": "https://hull-weather-app.herokuapp.com/",
+      "hrefTitle": "Weather app link",
+      "hrefText": " Project link"
+    }
+  },
+  {
     "imgSrc": "/static/nextjs-logo.png",
     "imgAlt": "Next JS",
     "title": "NextJs website",
