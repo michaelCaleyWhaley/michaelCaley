@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8080",
     "build": "next build",
     "start": "next start -p $PORT"
   },
@@ -17,8 +17,10 @@
     "custom-event-polyfill": "^1.0.7",
     "next": "9.4.4",
     "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.10",
     "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react-dom": "16.9.0",
+    "sendmail": "^1.6.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
