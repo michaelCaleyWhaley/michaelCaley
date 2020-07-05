@@ -56,7 +56,7 @@ async function sendMail({ name, email, telephone, inquiry }) {
 function isValidOrigin(origin) {
   const validatedOrigin = [
     'http://localhost:3000',
-    'https://michaelcaleywhaley.github.io/',
+    'https://michaelcaleywhaley.github.io',
   ].filter((listItem) => listItem === origin);
   return validatedOrigin.length > 0;
 }
