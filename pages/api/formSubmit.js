@@ -66,7 +66,7 @@ async function handler(req, res) {
   await runMiddleware(req, res, cors);
 
   if (!isValidOrigin(req.headers.origin)) {
-    res.status(401).send('mail failed');
+    res.status(401).send(req.headers.origin);
     return;
   }
 
