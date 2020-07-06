@@ -39,11 +39,11 @@ async function sendMail({ name, email, telephone, inquiry }) {
     await new Promise((resolve, reject) =>
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-          hasSuccessfullyResolved = false;
-          resolve(error);
+          hasSuccessfullyResolved = error;
+          resolve(false);
         } else {
-          hasSuccessfullyResolved = true;
-          resolve(info);
+          hasSuccessfullyResolved = info;
+          resolve(true);
         }
       }),
     );
