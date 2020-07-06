@@ -78,9 +78,9 @@ async function handler(req, res) {
     inquiry,
   });
   if (hasMailSucceeded) {
-    res.status(200).send(hasMailSucceeded);
+    res.status(200).send(`${hasMailSucceeded}`);
   } else {
-    res.status(400).send(hasMailSucceeded);
+    res.status(400).send(`${hasMailSucceeded}`);
   }
 }
 
