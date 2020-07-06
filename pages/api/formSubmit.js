@@ -71,16 +71,16 @@ async function handler(req, res) {
   }
 
   const { name, email, telephone, inquiry } = req.body;
-  const hasMailSucceeded = sendMail({
+  const hasMailSucceeded = await sendMail({
     name,
     email,
     telephone,
     inquiry,
   });
   if (hasMailSucceeded) {
-    res.status(200).send(`${hasMailSucceeded}`);
+    res.status(200).send(hasMailSucceeded);
   } else {
-    res.status(400).send(`${hasMailSucceeded}`);
+    res.status(400).send(hasMailSucceeded);
   }
 }
 
