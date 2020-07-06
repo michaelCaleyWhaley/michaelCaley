@@ -40,10 +40,10 @@ async function sendMail({ name, email, telephone, inquiry }) {
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           hasSuccessfullyResolved = false;
-          resolve(false);
+          resolve(error);
         } else {
           hasSuccessfullyResolved = true;
-          resolve(true);
+          resolve(info);
         }
       }),
     );
@@ -78,9 +78,9 @@ async function handler(req, res) {
     inquiry,
   });
   if (hasMailSucceeded) {
-    res.status(200).send('mail sent');
+    res.status(200).send(hasMailSucceeded);
   } else {
-    res.status(400).send('mail failed');
+    res.status(400).send(hasMailSucceeded);
   }
 }
 
