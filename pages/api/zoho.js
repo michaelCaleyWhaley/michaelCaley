@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
   let transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.eu',
+    host: 'smtp.zoho.com',
     secure: true,
     port: 465,
     auth: {
