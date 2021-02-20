@@ -57,6 +57,7 @@ function isValidOrigin(origin) {
   const validatedOrigin = [
     'http://localhost:3000',
     'https://michaelcaleywhaley.github.io',
+    'https://www.caltechairconditioning.co.uk'
   ].filter((listItem) => listItem === origin);
   return validatedOrigin.length > 0;
 }
