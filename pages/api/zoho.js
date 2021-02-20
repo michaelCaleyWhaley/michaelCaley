@@ -1,26 +1,31 @@
 import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
+  const { name, email, telephone, inquiry, emailDest } = req.body;
+  if ((!name, !email, !telephone, !inquiry, !emailDest)) {
+    res.status(400).json({ e: 'Incomplete details' });
+  }
+
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     secure: true,
     port: 465,
     auth: {
-      user: 'webcomments@caltechairconditioning.co.uk',
+      user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_KEY,
     },
   });
 
   const mailOptions = {
-    from: 'webcomments@caltechairconditioning.co.uk', // sender address
-    to: 'kneedeepwater@hotmail.com ',
-    subject: 'webComments', // Subject line
-    html: 'test', // plain text body
+    from: process.env.EMAIL_USER,
+    to: emailDest,
+    subject: 'webComments',
+    html: `${name} ${email} ${telephone} ${inquiry}`,
   };
 
   try {
     const response = await transporter.sendMail(mailOptions);
-    res.send({ response });
+    res.send({ response, host: req.headers.host });
   } catch (e) {
     res.send({ e });
   }
