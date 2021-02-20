@@ -1,7 +1,6 @@
 import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
-  res.send({ t: process.env.EMAIL_HOST, e: process.env.EMAIL_KEY });
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     secure: true,
