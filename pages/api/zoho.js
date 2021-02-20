@@ -2,12 +2,12 @@ import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
   let transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.com',
+    host: process.env.EMAIL_HOST,
     secure: true,
     port: 465,
     auth: {
       user: 'webcomments@caltechairconditioning.co.uk',
-      pass: 'e2hB4TWhIvNj',
+      pass: process.env.EMAIL_KEY,
     },
   });
 
@@ -15,7 +15,7 @@ export default async (req, res) => {
     from: 'webcomments@caltechairconditioning.co.uk', // sender address
     to: 'kneedeepwater@hotmail.com ',
     subject: 'webComments', // Subject line
-    html: <p>test</p>, // plain text body
+    html: 'test', // plain text body
   };
 
   try {
