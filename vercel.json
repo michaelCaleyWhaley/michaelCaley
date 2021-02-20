@@ -8,6 +8,7 @@
           "value": "true"
         },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "connection", "value": "Keep-Alive" },
         {
           "key": "Access-Control-Allow-Methods",
           "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
