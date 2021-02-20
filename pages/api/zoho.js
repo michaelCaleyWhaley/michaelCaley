@@ -25,7 +25,7 @@ export default async (req, res) => {
 
   try {
     const response = await transporter.sendMail(mailOptions);
-    res.send({ response, host: req.headers.host });
+    res.send({ host: req.headers.host, response });
   } catch (e) {
     res.send({ e });
   }
