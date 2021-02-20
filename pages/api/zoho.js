@@ -25,6 +25,7 @@ export default async (req, res) => {
 
   try {
     const response = await transporter.sendMail(mailOptions);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send({ host: req.headers.host, response });
   } catch (e) {
     res.send({ e });
