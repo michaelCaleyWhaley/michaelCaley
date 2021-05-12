@@ -17,7 +17,7 @@
     "custom-event-polyfill": "^1.0.7",
     "next": "10.0.5",
     "node-sass": "^4.14.1",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "sendmail": "^1.6.1"
