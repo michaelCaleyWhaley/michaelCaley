@@ -1,4 +1,23 @@
+import Cors from 'cors';
 import nodemailer from 'nodemailer';
+
+function initMiddleware(middleware) {
+  return (req, res) =>
+    new Promise((resolve, reject) => {
+      middleware(req, res, (result) => {
+        if (result instanceof Error) {
+          return reject(result);
+        }
+        return resolve(result);
+      });
+    });
+}
+
+const cors = initMiddleware(
+  Cors({
+    methods: ['GET', 'POST', 'OPTIONS'],
+  }),
+);
 
 // const allowCors = (fn) => async (req, res) => {
 //   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -52,32 +71,36 @@ import nodemailer from 'nodemailer';
 // });
 
 export default async (req, res) => {
-  const { name, email, telephone, inquiry, emailDest } = req.body;
-  if ((!name, !email, !telephone, !inquiry, !emailDest)) {
-    res.status(400).json({ e: 'Incomplete details' });
-  }
+  await cors(req, res);
 
-  let transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
-    secure: true,
-    port: 465,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_KEY,
-    },
-  });
+  res.send({ success: 'test' });
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: emailDest,
-    subject: 'webComments',
-    html: `${name} ${email} ${telephone} ${inquiry}`,
-  };
+  // const { name, email, telephone, inquiry, emailDest } = req.body;
+  // if ((!name, !email, !telephone, !inquiry, !emailDest)) {
+  //   res.status(400).json({ e: 'Incomplete details' });
+  // }
 
-  try {
-    const response = await transporter.sendMail(mailOptions);
-    res.send({ response });
-  } catch (e) {
-    res.send({ e });
-  }
+  // let transporter = nodemailer.createTransport({
+  //   host: process.env.EMAIL_HOST,
+  //   secure: true,
+  //   port: 465,
+  //   auth: {
+  //     user: process.env.EMAIL_USER,
+  //     pass: process.env.EMAIL_KEY,
+  //   },
+  // });
+
+  // const mailOptions = {
+  //   from: process.env.EMAIL_USER,
+  //   to: emailDest,
+  //   subject: 'webComments',
+  //   html: `${name} ${email} ${telephone} ${inquiry}`,
+  // };
+
+  // try {
+  //   const response = await transporter.sendMail(mailOptions);
+  //   res.send({ response });
+  // } catch (e) {
+  //   res.send({ e });
+  // }
 };
