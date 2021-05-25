@@ -1,10 +1,10 @@
-import Cors from 'cors';
+// import Cors from 'cors';
 import nodemailer from 'nodemailer';
 
 // Initializing the cors middleware
-const cors = Cors({
-  methods: ['POST', 'HEAD'],
-});
+// const cors = Cors({
+//   methods: ['POST', 'HEAD'],
+// });
 
 function runMiddleware(req, res, fn) {
   return new Promise((resolve, reject) => {
@@ -57,14 +57,15 @@ function isValidOrigin(origin) {
   const validatedOrigin = [
     'http://localhost:3000',
     'https://michaelcaleywhaley.github.io',
-    'https://www.caltechairconditioning.co.uk'
+    'https://www.caltechairconditioning.co.uk',
   ].filter((listItem) => listItem === origin);
   return validatedOrigin.length > 0;
 }
 
 async function handler(req, res) {
   // Run the middleware
-  await runMiddleware(req, res, cors);
+  // await runMiddleware(req, res, cors);
+  await runMiddleware(req, res);
 
   if (!isValidOrigin(req.headers.origin)) {
     res.status(401).send(req.headers.origin);
