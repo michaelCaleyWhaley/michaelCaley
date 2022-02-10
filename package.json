@@ -17,7 +17,7 @@
     "custom-event-polyfill": "^1.0.7",
     "next": "^10.0.5",
     "next-compose-plugins": "^2.2.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemailer": "^6.4.10",
     "react": "16.9.0",
     "react-dom": "16.9.0",
